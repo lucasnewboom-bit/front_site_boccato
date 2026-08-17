@@ -1,0 +1,150 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #602b23;
+    color: #D4AF37;
+    position: relative;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "Butler", serif;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+.logo img {
+    width: 70%;
+    height: auto;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    flex-shrink: 0; /*IMPEDE O MENU DE ENCOLHER */
+    font-size: 20px;
+}
+.menu a{
+    font-size: 24px;
+    white-space: nowrap;
+    color: #D4AF37;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: #fff;
+}
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .cabecalho {
+        padding: 15px 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color:#602b23;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+    .menu.ativo {
+        display: flex;
+    }
+}
+/*inicio index*/
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.side{
+    flex: 25%;
+    background-color: #999B9B;
+    padding: 20px
+}
+.main{
+    flex: 75%;
+    background-color: #D4AF37;
+    padding: 20px;
+}
+/*buscar*/
+.busca {
+    width: 100%;
+    text-align: center;
+    font-family: "Butler", serif;
+}
+.busca input[type="search"]{
+    width: 90%;
+    height: 30px;
+    padding: 8px;
+    border-radius: 10px;
+}
+.busca h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+.busca form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+
+}
+.busca button{
+    background-color: #602b23;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    padding: 10px 25px;
+    height: 40px;
+    font-family: "Butler", serif;
+
+}
+
+/*menu-departamento*/
+.menu_departamentos {
+    clear: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menu_departamentos h2 {
+    background-color: #602b23;
+    color: #D4AF37;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "Butler", serif;
+    letter-spacing: 0.10em;
+    text-align: center;
+}
+.menu_departamentos h3{
+    background-color: #602b23;
+    color: #D4AF37;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-family: "Butler", serif;
+    letter-spacing: 0.10em;
+    text-align: center;
+}
+/*fim index*/
