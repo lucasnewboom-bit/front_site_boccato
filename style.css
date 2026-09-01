@@ -72,7 +72,7 @@
 }
 .side{
     flex: 25%;
-    background-color: #999B9B;
+    background-color: #211b15;
     padding: 20px
 }
 .main{
@@ -80,11 +80,39 @@
     background-color: #D4AF37;
     padding: 20px;
 }
+/*slideshow*/
+.slideshow {
+    width: 100%;
+    height: 510px;
+    position: relative;
+    overflow: hidden;
+}
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    cursor: pointer;
+}
+.slideshow img.ativo {
+    opacity: 1;
+}
+
 /*buscar*/
 .busca {
     width: 100%;
     text-align: center;
     font-family: "Butler", serif;
+    color: white;
 }
 .busca input[type="search"]{
     width: 90%;
@@ -109,11 +137,19 @@
     border: none;
     color: #fff;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px #3d1b16;
     padding: 10px 25px;
     height: 40px;
     font-family: "Butler", serif;
-
+    transition: 0.1s;
+    cursor: pointer;
+}
+.busca button:hover {
+    background-color: #713329;
+}
+.busca button:active{
+    box-shadow: 1px 1px 0px #3d1b16;
+    transform: translate(2px, 2px);
 }
 
 /*menu-departamento*/
@@ -146,5 +182,103 @@
     font-family: "Butler", serif;
     letter-spacing: 0.10em;
     text-align: center;
+}
+.menu_departamentos > nav > ul {
+    margin: 0;
+    padding: 0;
+}
+.menu_departamentos a{
+    color: white;
+    text-decoration: none;
+}
+.menu_departamentos > nav > ul > li > a {
+    display: block;
+    background-color: #602b23;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 10px auto;
+    width: 80%;
+}
+.menu_departamentos li ul a {
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+.menu_departamentos li ul{
+    list-style: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3 ease;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+.menu_departamentos li:hover ul{
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 10px;
+}
+/*promocoes*/
+.promocoes {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ddd;
+    width: 100%;
+}
+
+.promocoes > div {
+    background-color: #211b15;
+    width: calc(20% - 8px);
+    height: 288px;
+    padding: 12px;
+    margin: 4px;
+    color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.imagem-produto {
+    width: 100%;
+    height: 160px;
+    background-color: white;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.imagem-produto img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.imagem-produto + h3 {
+    margin: 8px 0 4px;
+}
+
+.imagem-produto + h3 + p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*menus da lateral*/
+.side a{ 
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-family: "Butler", serif;
+}
+.side a:hover {
+    color:#602b23;
 }
 /*fim index*/
